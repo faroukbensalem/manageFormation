@@ -7,6 +7,10 @@ const etudiantSchema = new mongoose.Schema({
     prenom:{
         type:String,
     },
+    formationId:{
+        type : mongoose.Schema.Types.ObjectId,
+        ref:"formationSchema" ,
+       },
 });
 
 const etudiant = mongoose.model("etudiant",etudiantSchema);

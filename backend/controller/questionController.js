@@ -32,7 +32,7 @@ const addOption = async(req,res )=>{
     }catch(err){
         res.status(500).json({message:"server error"},err)
     }
-}
+};
 
 const deleteOption = async(req , res)=>{
     try{
@@ -46,12 +46,20 @@ const deleteOption = async(req , res)=>{
     res.status(500).json({ message: "Internal server error" });
     }
    
+};
+const modifyOption = async(req,res)=>{
+ try{
+
+ }catch(err){
+
+ }
 }
 
 module.exports ={
 getOptionByQuestion,
 addOption,
-deleteOption
+deleteOption,
+modifyOption
 };
 
 

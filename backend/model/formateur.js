@@ -7,6 +7,11 @@ const formateurSchema = new mongoose.Schema({
     prenom:{
         type:String,
     },
+    formationId :{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"formationSchema",
+        required:true
+    }
 });
 
 const formateur = mongoose.model("formateur", formateurSchema);

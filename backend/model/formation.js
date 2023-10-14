@@ -12,7 +12,17 @@ const formationSchema = new mongoose.Schema({
     },
     image:{
         type:String,
-    }
+    },
+    fichierDuCour:{
+       data : Buffer,
+       contentType : String ,
+       required: true
+    },
+    QuizId :[{
+        type :mongoose.Schema.Types.ObjectId,
+        ref:"quizSchema",
+        required : true
+    }]
 });
 
 const formation = mongoose.model("formation",formationSchema);
