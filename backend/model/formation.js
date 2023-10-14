@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const formationSchema = new mongoose({
+const formationSchema = new mongoose.Schema({
     titre:{
         type:String,
     },

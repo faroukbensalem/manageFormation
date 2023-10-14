@@ -1,14 +1,14 @@
 const mongoose = require("mongoose")
 
-const questionSchema = new mongoose({
-    text :{ 
+const questionSchema = new mongoose.Schema({
+    titre :{ 
      type:   String
     },
-    optionId :{
-        type: mongoose.Schema.ObjectId,
-        ref:"optionSchema",
-        required : true
-    }
+    optionId :[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"optionSchema",   
+    },]
+    
 
 });
 

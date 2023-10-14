@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const optionSchema =new mongoose({
+const optionSchema =new mongoose.Schema({
     text : {
         type:String,
     },
